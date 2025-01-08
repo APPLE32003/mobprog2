@@ -2,10 +2,10 @@
   "expo": {
     "name": "HotelQuestApp",
     "slug": "HotelQuestApp",
+
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#0054ff"
     }
   }
 }

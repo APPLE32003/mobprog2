@@ -28,6 +28,7 @@ import PaymentPage from './PaymentPage';
 import ConfirmPayment from './ConfirmPayment';
 import RatePage from './RatePage';
 import SettingsPage from './SettingsPage';
+import UserProfile from './UserProfile';
 
 
 // Create the Stack Navigator
@@ -81,6 +82,11 @@ function App() {
                 <Stack.Screen 
                     name="RatePage"
                     component={RatePage} />
+
+                <Stack.Screen 
+                 name="UserProfile" 
+                 component={UserProfile} />
+
 
                 <Stack.Screen 
                     name="Settings"

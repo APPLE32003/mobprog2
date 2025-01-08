@@ -4,8 +4,23 @@ import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
 export default function SignUpPage({ navigation }) {
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+
+    const handleSignUp = async () => {
+    const userData = { fullName, email, phoneNumber };
+    try {
+    await AsyncStorage.setItem('userData', JSON.stringify(userData));
+    navigation.navigate('UserProfile'); // Navigate to UserProfile
+  } catch (error) {
+    console.error('Failed to save user data:', error);
+  }
+};
+
 
     return (
+        
         <View style={styles.container}>
             <Text style={styles.title}>Sign Up</Text>
             <View style={styles.form}>
